@@ -15,14 +15,16 @@ async function createListing() {
     startTime: startTime,
     descriptionTrip: descriptionTrip,
     nbPlaces: nbPlaces,
-    appointmentaddress: appointmentaddress,
+    appointmentAddress: appointmentaddress,
     memberId: memberId,
   };
+  let jwt = window.localStorage.getItem("jwt");
 
   let request = {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
+      Authorization: `Bearer ${jwt}`,
     },
     body: JSON.stringify(listing),
   };

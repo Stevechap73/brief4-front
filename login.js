@@ -32,7 +32,7 @@ async function handleLogin() {
     toast.style.color = "white";
 
     setTimeout(() => {
-      window.location.href = "./login.html";
+      window.location.href = "./mylisting.html";
       toast.classList.add("hidden");
     }, 3000);
   } else {
