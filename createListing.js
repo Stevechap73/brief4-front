@@ -26,7 +26,6 @@ async function createListing() {
     },
     body: JSON.stringify(listing),
   };
-
   let apiRequest = await fetch("http://localhost:3023/createListing", request);
   let response = await apiRequest;
   console.log(response);
@@ -56,3 +55,4 @@ async function createListing() {
 
   // window.location.href = "./allListings.html";
 }
+createListing();
